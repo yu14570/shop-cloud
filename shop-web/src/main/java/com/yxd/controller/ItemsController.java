@@ -1,6 +1,6 @@
 package com.yxd.controller;
 
-import com.yxd.api.items.ItemService;
+import com.yxd.api.items.ItemFeign;
 import com.yxd.pojo.Items;
 import com.yxd.pojo.ItemsImg;
 import com.yxd.pojo.ItemsParam;
@@ -24,7 +24,7 @@ import java.util.List;
 @RequestMapping("items")
 public class ItemsController extends BaseController {
     @Autowired
-    private ItemService itemService;
+    private ItemFeign itemService;
 
     @ApiOperation(value = "查询商品详情", notes = "查询商品详情", httpMethod = "GET")
     @GetMapping("/info/{itemId}")

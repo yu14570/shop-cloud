@@ -20,7 +20,7 @@ import java.util.List;
  * @create: 2020-11-29
  */
 @FeignClient(contextId = "ItemService",name = "eureka-items")
-public interface ItemService {
+public interface ItemFeign {
 
     /**
      * 根据商品ID查询详情

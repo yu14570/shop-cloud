@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(contextId = "carouselService",name = "eureka-items")
-public interface CarouselService {
+@FeignClient(contextId = "CarouselFeign",name = "eureka-items")
+public interface CarouselFeign {
 
     /**
      * 查询所有轮播图列表

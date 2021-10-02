@@ -16,4 +16,47 @@
         <module>shop-service-order</module>
         <module>shop-service-user</module>
     </modules>
+
+    <dependencies>
+        <!-- service服务公共依赖，文档，mapper，Feign调用服务 -->
+        <dependency>
+            <groupId>com.yxd</groupId>
+            <artifactId>shop-common-swagger</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yxd</groupId>
+            <artifactId>shop-common-mapper</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.yxd</groupId>
+            <artifactId>shop-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- Eureka相关，注册， -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!--springBoot相关-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

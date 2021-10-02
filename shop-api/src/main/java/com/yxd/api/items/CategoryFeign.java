@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @FeignClient(contextId = "categoryService",name = "eureka-items")
-public interface CategoryService {
+public interface CategoryFeign {
 
     /**
      * 查询所有一级分类

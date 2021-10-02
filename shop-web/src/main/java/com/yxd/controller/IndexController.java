@@ -1,7 +1,7 @@
 package com.yxd.controller;
 
-import com.yxd.api.items.CarouselService;
-import com.yxd.api.items.CategoryService;
+import com.yxd.api.items.CarouselFeign;
+import com.yxd.api.items.CategoryFeign;
 import com.yxd.enmus.YesOrNo;
 import com.yxd.pojo.Carousel;
 import com.yxd.pojo.Category;
@@ -29,10 +29,10 @@ public class IndexController {
     final static Logger logger = LoggerFactory.getLogger(IndexController.class);
 
     @Autowired
-    private CarouselService carouselService;
+    private CarouselFeign carouselService;
 
     @Autowired
-    private CategoryService categoryService;
+    private CategoryFeign categoryService;
 
     @ApiOperation(value = "获取首页轮播图列表", notes = "获取首页轮播图列表", httpMethod = "GET")
     @GetMapping("/carousel")
