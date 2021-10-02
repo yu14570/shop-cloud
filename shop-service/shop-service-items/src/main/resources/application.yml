@@ -1,3 +1,6 @@
+swagger:
+  name: 'items服务，提供商品查询'
+  controller: 'com.yxd.controller'
 
 server:
   port: 8090
