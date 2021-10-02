@@ -69,7 +69,7 @@ public interface ItemFeign {
      */
     @PostMapping("/items/item/queryPagedComments")
     public PagedGridResult queryPagedComments(@RequestParam("itemId")String itemId,
-                                              @RequestParam("level")Integer level,
+                                              @RequestParam(name ="level", required = false)Integer level,
                                               @RequestParam("page")Integer page,
                                               @RequestParam("pageSize")Integer pageSize);
 

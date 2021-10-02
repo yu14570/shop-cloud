@@ -4,11 +4,13 @@ import com.yxd.api.test.PrividerFeign;
 import com.yxd.api.test.TestFeign;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiSort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Api(value = "测试相关", tags = {"测试相关的api接口"})
+@ApiSort(1)
 @RestController("/consumer")
 public class TestController {
 

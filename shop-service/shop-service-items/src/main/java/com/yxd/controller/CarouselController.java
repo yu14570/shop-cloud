@@ -1,7 +1,7 @@
 package com.yxd.controller;
 
 import com.yxd.pojo.Carousel;
-import com.yxd.service.CarouselService;
+import com.yxd.items.service.CarouselService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

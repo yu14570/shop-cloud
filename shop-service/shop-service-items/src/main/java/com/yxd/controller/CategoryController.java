@@ -1,7 +1,7 @@
 package com.yxd.controller;
 
 import com.yxd.pojo.Category;
-import com.yxd.service.CategoryService;
+import com.yxd.items.service.CategoryService;
 import com.yxd.vo.CategoryVO;
 import com.yxd.vo.NewItemsVO;
 import io.swagger.annotations.Api;

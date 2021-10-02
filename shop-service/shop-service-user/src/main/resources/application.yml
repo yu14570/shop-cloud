@@ -1,9 +1,9 @@
 swagger:
-  name: 'items服务，提供商品查询'
-  controller: 'com.yxd.order.controller'
+  name: 'user-用户服务'
+  controller: 'com.yxd.user.controller'
 
 server:
-  port: 8090
+  port: 8091
 
 eureka:
   client:
@@ -42,7 +42,7 @@ spring:
       max-file-size: 512000     # 文件上传大小限制为500kb
       max-request-size: 512000  # 请求大小限制为500kb
   application:
-    name: eureka-items
+    name: eureka-order
 
 ############################################################
 #

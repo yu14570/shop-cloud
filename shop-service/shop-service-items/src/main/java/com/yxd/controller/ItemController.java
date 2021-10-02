@@ -4,10 +4,12 @@ import com.yxd.pojo.Items;
 import com.yxd.pojo.ItemsImg;
 import com.yxd.pojo.ItemsParam;
 import com.yxd.pojo.ItemsSpec;
-import com.yxd.service.ItemService;
+import com.yxd.items.service.ItemService;
 import com.yxd.utils.PagedGridResult;
 import com.yxd.vo.CommentLevelCountsVO;
 import com.yxd.vo.ShopcartVO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +26,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/items/item")
 public class ItemController {
+    public static final Logger log = LoggerFactory.getLogger(ItemController.class);
 
     @Autowired
     private ItemService itemService;
@@ -85,9 +88,10 @@ public class ItemController {
      */
     @PostMapping("queryPagedComments")
     public PagedGridResult queryPagedComments(@RequestParam("itemId")String itemId,
-                                              @RequestParam("level")Integer level,
+                                              @RequestParam(name ="level", required = false)Integer level,
                                               @RequestParam("page")Integer page,
                                               @RequestParam("pageSize")Integer pageSize){
+        log.info("进入items服务的{}控制器，执行{}方法","ItemController","queryPagedComments");
         return itemService.queryPagedComments(itemId, level, page, pageSize);
     }
 

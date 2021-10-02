@@ -1,6 +1,6 @@
 swagger:
   name: 'order-订单服务'
-  controller: 'com.yxd.controller'
+  controller: 'com.yxd.order.controller'
 
 server:
   port: 8089
